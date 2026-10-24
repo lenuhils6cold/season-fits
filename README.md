@@ -1,6 +1,5 @@
-git init
-git add .
-git commit -m "Season Fits"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/season-fits.git
-git push -u origin main
+# Season Fits
+
+Outfit ideas for every season. This repository contains the static website and image assets.
+
+The site is published with GitHub Pages from the `main` branch.

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Season Fits — Outfit Ideas for Every Season</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+:root{--bg:#FFF8EE;--ink:#2B1510;--line:#EBD9BE;--muted:#6B4A3E;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1411;--ink:#FFF4E3;--line:#43302A;--muted:#C9B09F}}
+:root[data-theme="dark"]{--bg:#1D1411;--ink:#FFF4E3;--line:#43302A;--muted:#C9B09F}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 104px)}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+.serif{font-family:Fraunces,Georgia,serif}
+.hero{background:radial-gradient(circle at 12% 15%,#F48FB1 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFC93C 0,transparent 38%),radial-gradient(circle at 15% 92%,#E8641E 0,transparent 40%),radial-gradient(circle at 90% 90%,#3B7DD8 0,transparent 42%),#2B1510}
+.s-spring{background:linear-gradient(160deg,#FFD3E2,#CFEBC2);color:#2B1510}
+.s-summer{background:linear-gradient(160deg,#FFE066,#FFA24C);color:#2B1510}
+.s-red{background:linear-gradient(160deg,#6E1710,#B83A22 65%,#C9481F);color:#FFF4E3}
+.s-winter{background:linear-gradient(160deg,#10223B,#2D5887 70%,#4B7FB5);color:#F2F8FF}
+.s-dark{background:#2B1510;color:#FFF4E3}
+.glass{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px)}
+.s-spring .glass,.s-summer .glass{background:rgba(43,21,16,.07);border-color:rgba(43,21,16,.18)}
+.title{background:linear-gradient(180deg,#FFF4E3 30%,#FFC56B);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(0,0,0,.45))}
+.lcard{background:#FFF9EF;color:#2B1510;border-radius:1.75rem;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s;box-shadow:0 10px 30px -14px rgba(30,8,4,.55)}
+.lcard:hover{transform:scale(1.03);box-shadow:0 28px 55px -20px rgba(30,8,4,.7)}
+.js .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.5rem;border-radius:999px;font-weight:600;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px) scale(1.04)}
+.cta{padding:1.1rem 2rem;font-size:1.1rem;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
+.heart{color:#C9381F;background:rgba(255,255,255,.95);transition:transform .2s}.heart:active{transform:scale(.8)}
+.heart.on svg{fill:#C9381F;animation:pop .35s}
+@keyframes pop{50%{transform:scale(1.4)}}
+.leaf{position:absolute;top:-10%;animation:fall linear infinite;opacity:.85;pointer-events:none}
+@keyframes fall{to{transform:translateY(120vh) rotate(540deg) translateX(60px)}}
+.decor{position:absolute;inset:0 0 auto 0;height:560px;overflow:hidden;pointer-events:none}
+.p{position:absolute;top:-40px;animation:fall2 linear infinite;opacity:.8}
+@keyframes fall2{to{transform:translateY(600px) rotate(360deg)}}
+.float{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-14px) rotate(var(--r))}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,244,227,.55)}50%{box-shadow:0 0 0 12px rgba(255,244,227,0)}}
+.marquee{display:flex;width:max-content;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.nav a{padding:.35rem .8rem;border-radius:999px;white-space:nowrap;transition:background .2s}
+.nav a:hover,.nav a.act{background:rgba(255,244,227,.2);color:#FFC56B}
+.seg{display:inline-flex;border-radius:999px;border:1px solid rgba(255,244,227,.35);padding:3px}
+.seg button{padding:.35rem .9rem;border-radius:999px;font-weight:600;font-size:.85rem;transition:all .25s}
+.seg button[aria-pressed="true"]{background:#FFF4E3;color:#8A2A14}
+#drawer{transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+#drawer.open{transform:none}
+#scrim{opacity:0;pointer-events:none;transition:opacity .35s}#scrim.open{opacity:1;pointer-events:auto}
+a:focus-visible,button:focus-visible{outline:2px solid #FFC56B;outline-offset:2px}
+.chk{accent-color:#C9381F}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="fixed inset-x-0 top-0 z-40" style="padding-top:env(safe-area-inset-top,0px);background:rgba(43,21,16,.92);backdrop-filter:blur(10px);color:#FFF4E3">
+  <div class="max-w-7xl mx-auto px-4 pt-3 pb-2 md:pb-3 flex items-center gap-3">
+    <a href="#top" class="serif text-xl md:text-2xl font-black tracking-tight shrink-0"><span id="be">🌸</span> Season Fits</a>
+    <nav class="nav hidden md:flex gap-1 text-sm ml-4" aria-label="Seasons" id="nav"></nav>
+    <div class="seg ml-auto" role="group" aria-label="Who are you styling?"><button data-aud="t" aria-pressed="true">Teens</button><button data-aud="m" aria-pressed="false">New Mums</button></div>
+    <a href="#saved" class="hidden sm:flex items-center gap-2 text-sm shrink-0" aria-live="polite">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF8A5C" stroke="#FF8A5C" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>
+      <b class="favCount">0</b></a>
+  </div>
+  <nav class="nav md:hidden flex gap-1 overflow-x-auto text-sm px-3 pb-2" aria-label="Seasons" id="nav2"></nav>
+</header>
+
+<main id="top">
+<section class="hero relative overflow-hidden min-h-screen flex items-center text-[#FFF4E3]">
+  <div id="leaves" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-5 pt-36 pb-16 grid md:grid-cols-2 gap-10 items-center w-full">
+    <div>
+      <p class="inline-block glass rounded-full px-4 py-1.5 text-sm mb-5">4 seasons · 52 looks · teens &amp; new mums</p>
+      <h1 class="title serif font-black leading-[.9] text-[20vw] md:text-[8rem]">Season<br>Fits</h1>
+      <p class="mt-5 text-lg md:text-xl max-w-lg leading-relaxed">Easy outfit ideas for spring, summer, autumn and winter, picked for teenage girls and new mums.</p>
+      <p class="mt-8 mb-3 font-semibold">Who are you styling today?</p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button data-go="t" class="btn cta pulse" style="background:#FFF4E3;color:#8A2A14">I'm a teen →</button>
+        <button data-go="m" class="btn cta pulse" style="background:#FFC93C;color:#2B1510;animation-delay:-1.2s">I'm a new mum →</button>
+      </div>
+    </div>
+    <div class="relative h-[400px] md:h-[580px]">
+      <img data-img="18" alt="Spring look" class="float absolute left-0 top-6 w-40 md:w-60 rounded-2xl border-[6px] border-[#FFF4E3] shadow-2xl" style="--r:-6deg;transform:rotate(-6deg)">
+      <img data-img="21" alt="Summer look" class="float absolute right-0 top-0 w-40 md:w-60 rounded-2xl border-[6px] border-[#FFF4E3] shadow-2xl" style="--r:5deg;transform:rotate(5deg);animation-delay:-2s">
+      <img data-img="1" alt="Autumn look" class="float absolute left-1/4 bottom-0 w-40 md:w-60 rounded-2xl border-[6px] border-[#FFF4E3] shadow-2xl" style="--r:-2deg;transform:rotate(-2deg);animation-delay:-4s">
+    </div>
+  </div>
+</section>
+<div class="s-dark overflow-hidden py-3 serif italic text-xl" aria-hidden="true"><div class="marquee" id="mq"></div></div>
+
+<div id="seasons"></div>
+
+<section id="saved" class="s-dark py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <p class="reveal font-semibold tracking-widest text-sm uppercase text-[#FFC56B]">Your collection</p>
+    <h2 class="reveal serif font-black text-4xl md:text-5xl mt-2">Saved looks <span class="text-[#FF8A5C] text-2xl">(<span class="favCount">0</span>)</span></h2>
+    <div id="savedList" class="mt-8 flex flex-wrap gap-5"></div>
+  </div>
+</section>
+</main>
+<footer class="text-center text-sm py-8 px-5 text-[#E8D3BC]" style="background:#1D1411">
+  <p class="serif text-2xl font-black text-[#FFF4E3]">🌸 Season Fits ❄️</p>
+  <p class="mt-2">Outfit ideas for every season. Looks adapted from renders and boards by @iconinspo7 and @_lun3lle7.</p>
+</footer>
+
+<div id="scrim" class="fixed inset-0 z-50" style="background:rgba(30,8,4,.6)"></div>
+<aside id="drawer" class="fixed top-0 right-0 bottom-0 z-[60] w-full max-w-md overflow-y-auto" style="background:var(--bg);color:var(--ink);border-left:1px solid var(--line);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
+  <div class="p-6">
+    <div class="flex justify-between items-start gap-4">
+      <div><p id="dCat" class="text-sm font-semibold" style="color:#C9381F"></p><h2 id="dTitle" class="serif font-black text-3xl leading-tight mt-1"></h2></div>
+      <button id="dClose" class="p-2 -mr-2 text-3xl leading-none" aria-label="Close layer breakdown">&times;</button>
+    </div>
+    <div id="dFrame" class="rounded-xl mt-6 overflow-hidden"></div>
+    <p id="dDesc" class="mt-5 leading-relaxed" style="color:var(--muted)"></p>
+    <h3 class="serif font-bold text-xl mt-8 mb-2">Layer breakdown</h3>
+    <ul id="dLayers" style="border-top:1px solid var(--line)"></ul>
+    <button id="dHeart" class="mt-8 w-full py-3 rounded-full font-semibold text-white" style="background:linear-gradient(90deg,#B8301F,#D9541E)"></button>
+  </div>
+</aside>
+
+<script>
+const IMGS=Array.from({length:52},(_,i)=>`images/look-${i+1}.jpg`);
+const R={"9": "1024/1536", "10": "1024/1536", "11": "1024/1536", "12": "1024/1536", "13": "1024/1536", "14": "1024/1536", "15": "1024/1536", "16": "1024/1536", "17": "1023/1537", "18": "1023/1537", "19": "1023/1537", "20": "1023/1537", "21": "1023/1537", "22": "1023/1537", "23": "1023/1537", "24": "1024/1536", "25": "1024/1536", "26": "1024/1536", "27": "1024/1536", "28": "1024/1536", "29": "405/648", "30": "404/648", "31": "405/648", "32": "405/647", "33": "404/647", "34": "405/647", "35": "1024/1536", "36": "1086/1448", "37": "1122/1402", "38": "941/1672", "39": "1086/1448", "40": "1023/1537", "41": "1023/1537", "42": "1024/1536", "43": "1024/1536", "44": "1024/1536", "45": "1024/1536", "46": "1024/1536", "47": "1024/1536", "48": "1023/1537", "49": "1023/1537", "50": "1199/1312", "51": "1214/1295", "52": "1023/1537"};
+document.documentElement.classList.add("js");
+const LOOKS=[
+{id:1,title:"The Preppy Cardigan Duo",cat:"Knitwear",c:["#EADFCB","#6B3E32","#F3EEE4","#A8683A"],tip:"Leave the cardigan open so the plaid shows, then repeat the check in a hair bow.",
+ desc:"A cozy, buttoned cream knit cardigan worn open over a brown check plaid mini skirt, completed with slouchy cream legwarmers and chestnut platform boots.",
+ layers:[["Base layer","Fitted plaid pinafore bodice"],["Top / Outerwear","Buttoned cream knit cardigan, worn open"],["Bottoms","Brown check plaid mini skirt"],["Footwear","Chestnut platform boots"],["Accents","Slouchy cream legwarmers"]]},
+{id:2,title:"The Minimalist Knit Dress",cat:"Classics",c:["#F6F3EC","#FFFFFF","#7A4A2E","#2B1510"],tip:"Keep jewellery delicate. The fitted ribbing is the star of this look.",
+ desc:"A clean, sleek long-sleeve white bodycon knit mini dress paired with chunky white legwarmers and brown platform boots.",
+ layers:[["Base layer","Sleek long-sleeve white knit mini dress"],["Top / Outerwear","None, the dress is the statement"],["Bottoms","Bodycon knit hemline, mini length"],["Footwear","Brown platform boots"],["Accents","Chunky white legwarmers"]]},
+{id:3,title:"The Off-The-Shoulder Slouch",cat:"Classics",c:["#F1E9DA","#F7F2E8","#A8683A","#3B2418"],tip:"Carry a structured brown bag to ground all that cream.",
+ desc:"An ultra-cozy, oversized off-the-shoulder cream sweater dress accessorized with chunky white knit legwarmers and a chocolate brown shoulder tote bag.",
+ layers:[["Base layer","Oversized cream sweater dress"],["Top / Outerwear","Off-the-shoulder neckline, slouched fit"],["Bottoms","Dress hem, mini length"],["Footwear","Tan lace-up boots"],["Accents","Chunky white legwarmers, chocolate brown shoulder tote"]]},
+{id:4,title:"The Academica Plaid Combo",cat:"Knitwear",c:["#4A2B20","#7A4638","#F3EEE4","#A8683A"],tip:"Tuck just the front hem of the sweater into the skirt for shape.",
+ desc:"A relaxed-fit espresso brown crewneck sweater layered over a micro-pleated brown plaid skirt with slouchy white legwarmers.",
+ layers:[["Base layer","Collared shirt, tucked out of sight"],["Top / Outerwear","Relaxed espresso crewneck sweater"],["Bottoms","Micro-pleated brown plaid skirt"],["Footwear","Tan ankle boots"],["Accents","Slouchy white legwarmers"]]},
+{id:5,title:"The Tonal Espresso Layer",cat:"Loungewear",c:["#6B6A38","#4A2B20","#F3EEE4","#A8683A"],tip:"Let the leggings and the bag share one chocolate shade for a polished finish.",
+ desc:"A dense olive-brown cable knit pullover perfectly color-matched to chocolate brown fleece leggings, styled with high calf legwarmers.",
+ layers:[["Base layer","Chocolate brown fleece leggings"],["Top / Outerwear","Dense olive-brown cable knit pullover"],["Bottoms","Fleece leggings, color-matched"],["Footwear","Brown ankle boots"],["Accents","High calf legwarmers"]]},
+{id:6,title:"The Edge Denim Transition",cat:"Casual",c:["#5A3524","#F7F5F0","#6F94B5","#7A4A2E"],tip:"Keep the top simple and let the tall boots be the statement.",
+ desc:"A classic crisp white summer camisole toughened up with an oversized espresso leather jacket, frayed denim shorts, and tall distressed leather riding boots.",
+ layers:[["Base layer","Crisp white summer camisole"],["Top / Outerwear","Oversized espresso leather jacket"],["Bottoms","Frayed denim shorts"],["Footwear","Tall distressed leather riding boots"],["Accents","Leather texture against light denim"]]},
+{id:7,title:"The Cozy Headband Uniform",cat:"Casual",c:["#D8C7AA","#FFFFFF","#F3EEE4","#A8683A"],tip:"Match the headband to the skirt for one clean white thread through the outfit.",
+ desc:"A chunky heather-beige knit sweater over a pleated white tennis skirt, tied together with a soft white winter head wrap and slouchy legwarmers.",
+ layers:[["Base layer","Pleated white tennis skirt"],["Top / Outerwear","Chunky heather-beige knit sweater"],["Bottoms","Pleated white tennis skirt"],["Footwear","Tan suede boots"],["Accents","Soft white winter head wrap, slouchy legwarmers"]]},
+{id:8,title:"The Golden Maple Varsity",cat:"Loungewear",c:["#C98A2B","#F1E5CF","#FFFFFF","#D9A233"],tip:"Let a white collar peek out from the sweatshirt for a preppy contrast.",
+ desc:"A collared mustard-orange crewneck sweatshirt layered over a pleated cream mini skirt and paired with high-top work boots.",
+ layers:[["Base layer","White collar peeking from the neckline"],["Top / Outerwear","Collared mustard-orange crewneck sweatshirt"],["Bottoms","Pleated cream mini skirt"],["Footwear","High-top work boots"],["Accents","Crisp white ankle socks"]]},
+{"id": 9, "title": "The Cream Fold-Over Knit", "cat": "Street Style", "c": ["#EFE6D6", "#9A9A9A", "#C8B8A0", "#C9A24B"], "tip": "Keep jewellery gold and slim so the fold-over neckline stays the focus.", "desc": "A cream fold-over off-the-shoulder knit paired with washed grey wide-leg jeans, white-and-black retro sneakers and a beige nylon tote, finished with gold jewellery.", "layers": [["Base layer", "Cream fold-over off-the-shoulder knit"], ["Top / Outerwear", "None, the knit is the statement"], ["Bottoms", "Washed grey wide-leg jeans"], ["Footwear", "White and black retro sneakers with gum sole"], ["Accents", "Beige nylon tote, gold bangle and long gold necklace"]]},
+{"id": 10, "title": "The Charcoal Scarf Jacket", "cat": "Street Style", "c": ["#3F403F", "#9DBCCB", "#6B2434", "#C9A24B"], "tip": "Echo the burgundy of the bag in your sneakers so the outfit feels planned.", "desc": "A charcoal wool knit with a draped cowl cape layer over light-wash wide-leg jeans, burgundy suede sneakers and a matching burgundy leather tote.", "layers": [["Base layer", "Simple neutral knit underneath"], ["Top / Outerwear", "Charcoal wool jacket with draped scarf collar"], ["Bottoms", "Light-wash wide-leg jeans"], ["Footwear", "Burgundy suede retro sneakers"], ["Accents", "Burgundy leather tote, layered gold necklaces, vintage watch, gold rings"]]},
+{"id": 11, "title": "The Fuzzy Brown Coat", "cat": "Street Style", "c": ["#4F3D38", "#F3EEE4", "#8F8F8F", "#7A5A44"], "tip": "Let the coat hang open to show off the cable knit underneath.", "desc": "An oversized chocolate-brown textured coat with huge lapels layered over a cream cable-knit sweater, grey wide-leg jeans, brown retro sneakers and a cream tote.", "layers": [["Base layer", "Cream cable-knit crewneck sweater"], ["Top / Outerwear", "Oversized chocolate-brown textured coat"], ["Bottoms", "Grey wide-leg jeans"], ["Footwear", "Brown suede retro sneakers with gum sole"], ["Accents", "Cream tote with brown handles"]]},
+{"id": 12, "title": "The Khaki Trench Tee", "cat": "Street Style", "c": ["#FFFFFF", "#C9B48A", "#4A5E75", "#5A4033"], "tip": "Cinch the trench belt tight to turn a boxy jacket into a shape.", "desc": "A white baby tee under a cropped khaki trench with a belted waist, dark-wash wide-leg jeans, brown suede sneakers and a chocolate suede tote.", "layers": [["Base layer", "White fitted baby tee"], ["Top / Outerwear", "Cropped belted khaki trench jacket"], ["Bottoms", "Dark-wash wide-leg jeans"], ["Footwear", "Brown suede retro sneakers"], ["Accents", "Chocolate suede tote, gold watch, tinted sunglasses, gold hoops"]]},
+{"id": 13, "title": "The Taupe Knit & Waves", "cat": "Street Style", "c": ["#8A6F5B", "#8FB1C4", "#1F1C1A", "#C9A24B"], "tip": "Pair a neutral knit with dark accessories, like the black bag, for contrast.", "desc": "A soft taupe fuzzy crewneck sweater with wide sleeves over light-wash straight jeans, white retro sneakers and a black mini tote, with loose voluminous waves.", "layers": [["Base layer", "Taupe fuzzy wide-sleeve crewneck sweater"], ["Top / Outerwear", "None, the sweater is the top layer"], ["Bottoms", "Light-wash straight-leg jeans"], ["Footwear", "White retro sneakers with gum sole"], ["Accents", "Black mini tote, gold watch, black clover bracelet, voluminous curls"]]},
+{"id": 14, "title": "The Long Black Coat", "cat": "Street Style", "c": ["#1F1C1A", "#A9C8E2", "#FFFFFF", "#7A4A2E"], "tip": "All black up top with pale denim keeps it sharp and easy.", "desc": "A long black wool coat over a fitted black long-sleeve top, light-wash wide-leg jeans, retro sneakers and a black nylon tote.", "layers": [["Base layer", "Fitted black long-sleeve top"], ["Top / Outerwear", "Long black wool coat"], ["Bottoms", "Light-wash wide-leg jeans"], ["Footwear", "White and black retro sneakers"], ["Accents", "Black nylon tote with tan handles"]]},
+{"id": 15, "title": "The Taupe Cape", "cat": "Street Style", "c": ["#8C7B6B", "#2B2B2B", "#B5876A", "#C9A24B"], "tip": "Wear the cape over a dark bottom so the drape is the focal point.", "desc": "A taupe wool cape with a draped scarf neckline over washed black wide-leg jeans, silver running sneakers and a tan leather tote.", "layers": [["Base layer", "Simple neutral layer underneath"], ["Top / Outerwear", "Taupe wool cape with draped neckline"], ["Bottoms", "Washed black wide-leg jeans"], ["Footwear", "Silver and white running sneakers"], ["Accents", "Tan leather tote, gold and white bangle"]]},
+{"id": 16, "title": "The Campus Leather Jacket", "cat": "Street Style", "c": ["#4A3A33", "#1F1C1A", "#3B2A22", "#C9A27A"], "tip": "Add a plaid scarf for a pop of oat and rust against all that dark brown.", "desc": "A distressed brown leather bomber over a black scoop-neck long-sleeve, faded dark baggy jeans, chocolate mini boots and a suede shoulder bag, with a plaid scarf, oat knit beanie and tortoiseshell glasses.", "layers": [["Base layer", "Black scoop-neck long-sleeve top"], ["Top / Outerwear", "Distressed brown leather bomber jacket"], ["Bottoms", "Faded dark baggy jeans"], ["Footwear", "Chocolate brown shearling mini boots"], ["Accents", "Suede shoulder bag, plaid fringe scarf, oat knit beanie, tortoiseshell glasses"]]},
+{"id": 17, "title": "The Olive Peplum Top", "cat": "Casual", "c": ["#6B7A4A", "#3E6A9A", "#7A2234", "#1F1C1A"], "tip": "Tuck the front hem slightly so the peplum ruffle sits neatly over the jeans.", "desc": "A flowy olive peplum top with a lace-trim neckline over relaxed wide-leg blue jeans, black canvas sneakers and a burgundy leather tote, with a leather-strap watch and stacked gold rings.", "layers": [["Base layer", "Olive lace-trim peplum top"], ["Top / Outerwear", "None needed on warm days"], ["Bottoms", "Relaxed wide-leg blue jeans"], ["Footwear", "Black canvas low-top sneakers"], ["Accents", "Burgundy leather tote, gold watch, stacked rings, half-braided hair"]]},
+{"id": 18, "title": "The Floral Knit & Denim Skirt", "cat": "Cosy", "c": ["#EADFC8", "#E58C84", "#4B6E9A", "#5A3524"], "tip": "Pick up the pink of the knit's flowers with a small hair clip.", "desc": "A cream pointelle knit sweater with pastel floral bands over a denim mini skirt, slouchy cream socks and brown double-strap Mary Janes, with a paisley shoulder bag and half-up braids.", "layers": [["Base layer", "Cream pointelle knit with pastel floral bands"], ["Top / Outerwear", "None, the sweater is the top layer"], ["Bottoms", "Faded denim mini skirt"], ["Footwear", "Brown double-strap Mary Janes"], ["Accents", "Cream slouchy socks, paisley shoulder bag, tortoiseshell hair clip"]]},
+{"id": 19, "title": "The Mint Cami & Flared Jeans", "cat": "Casual", "c": ["#A9D3A0", "#4A6FA0", "#FFFFFF", "#C9C9C9"], "tip": "Look for jeans with sweet back-pocket embroidery for a little extra detail.", "desc": "A mint green lace-trim cami with mid-wash flared jeans that have embroidered flower back pockets, white high-top sneakers and a silver heart locket.", "layers": [["Base layer", "Mint green lace-trim cami"], ["Top / Outerwear", "Optional light cardigan for cooler days"], ["Bottoms", "Mid-wash flared jeans with flower embroidery"], ["Footwear", "White canvas high-top sneakers"], ["Accents", "Heart locket necklace, half-up hair"]]},
+{"id": 20, "title": "The Pink Fleece Lounge Set", "cat": "Loungewear", "c": ["#F2C6CF", "#E8DCCB", "#F4EDE3", "#B98A94"], "tip": "Pick one soft colour and keep the rest neutral so the pink pants stay the hero.", "desc": "Wide-leg pink fleece sweatpants with a vintage-style cream baby tee and cosy tulip-embroidered slippers: the softest outfit for a day at home.", "layers": [["Base layer", "Cream baby tee with vintage graphic and bow detail"], ["Top / Outerwear", "Add a cardigan or hoodie if it's chilly"], ["Bottoms", "Wide-leg pink fleece sweatpants"], ["Footwear", "Cream tulip-embroidered slippers"], ["Accents", "Half-up twisted bun"]]},
+{"id": 21, "title": "The Sky Blue Babydoll", "cat": "Dresses", "c": ["#BFD9F2", "#FFFFFF", "#E8DCC0", "#B97A44"], "tip": "Cowboy boots make a floaty mini dress feel fun and a little western.", "desc": "A light blue babydoll mini dress with a smocked waist and layered white ruffle hem, finished with tall cream embroidered cowboy boots and loose waves.", "layers": [["Base layer", "Light blue babydoll mini dress"], ["Top / Outerwear", "None"], ["Bottoms", "Layered white ruffle hem"], ["Footwear", "Tall cream embroidered cowboy boots"], ["Accents", "Half-up twist with loose waves"]]},
+{"id": 22, "title": "The Pink Ruffle Wrap", "cat": "Dressy", "c": ["#F5C2CC", "#7FA3C7", "#D9B96B", "#E8A0B0"], "tip": "A pearl chain belt turns a simple denim skirt into a dressed-up outfit.", "desc": "A pink ruffle wrap top over a denim mini skirt with a gold and pearl chain belt, pink bow kitten heels and a cream satin hair ribbon.", "layers": [["Base layer", "Pink ruffle wrap top"], ["Top / Outerwear", "None"], ["Bottoms", "Denim mini skirt"], ["Footwear", "Pink bow kitten heels"], ["Accents", "Pearl chain belt, cream satin hair bow, gold necklace"]]},
+{"id": 23, "title": "The White Henley & Sambas", "cat": "Casual", "c": ["#F1EDE3", "#FFFFFF", "#9CC2DE", "#C8C0B4"], "tip": "Pick sneakers with a hint of baby blue to match the bag.", "desc": "A white ribbed henley with white denim shorts, baby blue and cream retro sneakers, a blue snakeskin-print shoulder bag and a loose side braid.", "layers": [["Base layer", "White ribbed long-sleeve henley"], ["Top / Outerwear", "None"], ["Bottoms", "White denim shorts"], ["Footwear", "Cream and baby blue retro sneakers"], ["Accents", "Blue and cream shoulder bag, side braid"]]},
+{"id": 24, "title": "The Lemon & Pink Lace Set", "cat": "Casual", "c": ["#F6E04A", "#F48FB1", "#F4EDE3", "#D9B96B"], "tip": "Stick to two bright colours and keep everything else neutral.", "desc": "A yellow scoop-neck tank with pink lace drawstring shorts, cream slide sandals, a cream baguette bag and layered gold jewellery.", "layers": [["Base layer", "Yellow scoop-neck tank"], ["Top / Outerwear", "None"], ["Bottoms", "Pink lace drawstring shorts"], ["Footwear", "Cream flat slides"], ["Accents", "Cream shoulder bag, layered gold jewellery, hibiscus hair clip"]]},
+{"id": 25, "title": "The Cowl Knit Casual Day", "cat": "Cosy", "c": ["#8C7461", "#2E2E2E", "#5A3524", "#C0C0C0"], "tip": "Sunglasses on your head and gold layers make an easy finish.", "desc": "A taupe cowl-neck wrap knit with wide sleeves over washed black wide-leg jeans, silver running sneakers, a brown suede shoulder bag and layered gold jewellery.", "layers": [["Base layer", "Taupe cowl-neck wrap knit"], ["Top / Outerwear", "None"], ["Bottoms", "Washed black wide-leg jeans"], ["Footwear", "Silver and white running sneakers"], ["Accents", "Brown suede shoulder bag, sunglasses, gold bracelets and necklace"]]},
+{"id": 26, "title": "The Soft Casual Day", "cat": "Cosy", "c": ["#8C7B6B", "#2B2B2B", "#6B3E2A", "#C9A24B"], "tip": "A big tote and simple gold basics make an easy outfit feel finished.", "desc": "A soft oversized knit with a scarf-style wrap over dark washed wide-leg jeans, running sneakers, a chocolate tote bag and gold jewellery.", "layers": [["Base layer", "Oversized soft knit with scarf-wrap neckline"], ["Top / Outerwear", "None"], ["Bottoms", "Dark washed wide-leg jeans"], ["Footwear", "Silver and white running sneakers"], ["Accents", "Chocolate tote, gold watch, bracelets, necklace and hoops"]]},
+{"id": 27, "title": "The Tiered Summer Maxi", "cat": "Dresses", "c": ["#E4E48A", "#C9A98A", "#6B4A3A", "#C9A24B"], "tip": "Tie a satin scrunchie to your bag strap for a pretty cream accent.", "desc": "A pale lime tiered maxi dress with a ruched bodice and tie front, a brown leather shoulder bag, gold bangles and strappy cream block-heel sandals.", "layers": [["Base layer", "Pale lime tiered maxi dress with ruched bodice"], ["Top / Outerwear", "None"], ["Bottoms", "Gathered, tiered skirt"], ["Footwear", "Strappy cream block-heel sandals"], ["Accents", "Brown leather bag, gold bangles, satin scrunchie"]]},
+{"id": 28, "title": "The Soft Tie-Strap Maxi", "cat": "Dresses", "c": ["#E1E4A0", "#F4EDE3", "#D9B96B", "#B0B58A"], "tip": "Tie-strap shoulders look pretty from the back, so wear your hair up.", "desc": "A pale yellow-green maxi dress with tie shoulder straps and a tiered skirt, a cream bow shoulder bag, braided cream slides and a four-leaf clover necklace.", "layers": [["Base layer", "Pale yellow-green tie-strap maxi dress"], ["Top / Outerwear", "None"], ["Bottoms", "Tiered, gathered skirt"], ["Footwear", "Braided cream slides"], ["Accents", "Cream bow shoulder bag, clover necklace, wavy gold hoops"]]},
+{"id": 29, "title": "The Floral Ruffle Mini", "cat": "Dresses", "c": ["#F6E4E4", "#E5788F", "#FFFFFF", "#C9A24B"], "tip": "Cream strappy sandals keep a floral dress light and fresh.", "desc": "A pink floral tiered mini dress with tie shoulder straps, cream strappy sandals, a white shoulder bag and gold hoop earrings.", "layers": [["Base layer", "Pink floral tiered mini dress"], ["Top / Outerwear", "None"], ["Bottoms", "Ruffled tiers"], ["Footwear", "Cream strappy sandals"], ["Accents", "White shoulder bag, gold hoops, clover necklace"]]},
+{"id": 30, "title": "The Yellow Straw-Bag Maxi", "cat": "Dresses", "c": ["#F6E58A", "#C9A06B", "#E8DCC0", "#C9A24B"], "tip": "A straw tote is the easiest way to look summery.", "desc": "A buttery yellow tiered maxi dress with a sweetheart neckline, a woven straw tote, tan woven sandals and gold hoops.", "layers": [["Base layer", "Yellow tiered maxi dress with tie front"], ["Top / Outerwear", "None"], ["Bottoms", "Tiered skirt"], ["Footwear", "Tan woven sandals"], ["Accents", "Straw tote, gold hoops, clover necklace"]]},
+{"id": 31, "title": "The Blue Floral Maxi", "cat": "Dresses", "c": ["#F1F1F5", "#6E8FC7", "#FFFFFF", "#C9A24B"], "tip": "A side slit makes a long dress much easier to walk in.", "desc": "A white and blue floral maxi dress with a sweetheart neckline and side slit, white bow sandals, a cream shoulder bag and gold jewellery.", "layers": [["Base layer", "White and blue floral maxi dress"], ["Top / Outerwear", "None"], ["Bottoms", "Long skirt with side slit"], ["Footwear", "White bow sandals"], ["Accents", "Cream shoulder bag, gold hoops, clover necklace"]]},
+{"id": 32, "title": "The Pink Tiered Sundress", "cat": "Dresses", "c": ["#F48FB1", "#F4EDE3", "#C9A24B", "#E8DCC0"], "tip": "A crochet bag adds a handmade touch to a bright dress.", "desc": "A pink tiered halter sundress with a tie front, a cream crochet shoulder bag, flower-detail heeled sandals and gold hoops.", "layers": [["Base layer", "Pink tiered halter sundress"], ["Top / Outerwear", "None"], ["Bottoms", "Tiered skirt"], ["Footwear", "Cream flower-detail heeled sandals"], ["Accents", "Cream crochet bag, gold hoops, clover necklace"]]},
+{"id": 33, "title": "The Olive Wrap Maxi", "cat": "Dressy", "c": ["#8A9A5B", "#F4EDE3", "#C9A06B", "#C9A24B"], "tip": "Olive green goes beautifully with straw bags and cream sandals.", "desc": "An olive green halter maxi dress with a wrap skirt and side slit, a woven straw bag, cream flat thong sandals and gold hoops.", "layers": [["Base layer", "Olive green halter top"], ["Top / Outerwear", "None"], ["Bottoms", "Wrap maxi skirt with side slit"], ["Footwear", "Cream flat thong sandals"], ["Accents", "Woven straw bag, mini straw handbag, gold hoops"]]},
+{"id": 34, "title": "The Cherry Print Dress", "cat": "Dresses", "c": ["#FFFFFF", "#D63A3A", "#C9A24B", "#F4EDE3"], "tip": "Pick one bright accent, like the red bag, and keep the rest cream.", "desc": "A cream cherry-print ruched mini dress with a ruffle hem, a red shoulder bag, red strappy heeled sandals and gold hoops.", "layers": [["Base layer", "Cream cherry-print ruched mini dress"], ["Top / Outerwear", "None"], ["Bottoms", "Tiered ruffle hem"], ["Footwear", "Red strappy heeled sandals"], ["Accents", "Red shoulder bag, gold hoops, clover necklace"]]},
+{"id": 35, "title": "The Blush Evening Maxi", "cat": "Dressy", "c": ["#F6C6D0", "#E8D6B8", "#D9B96B", "#C9A24B"], "tip": "Gold accessories and a small clutch make a polished evening look.", "desc": "A blush pink halter maxi dress with a keyhole bodice and side slit, a checkered clutch, gold strappy heels and delicate gold jewellery.", "layers": [["Base layer", "Blush pink halter maxi dress"], ["Top / Outerwear", "None"], ["Bottoms", "Flowing skirt with side slit"], ["Footwear", "Gold strappy heels"], ["Accents", "Checkered clutch, gold bangle, hoops, clover necklace"]]},
+{"id": 36, "title": "The Nautical Stripe Top", "cat": "Casual", "c": ["#1F2A56", "#FFFFFF", "#7FA3C7", "#B97A44"], "tip": "Chunky cork wedges and gold earrings give a fun retro summer feel.", "desc": "A navy and white striped babydoll top with denim shorts, cork wedge sandals with daisy details, big gold earrings and curly hair.", "layers": [["Base layer", "Navy and white striped babydoll top"], ["Top / Outerwear", "None"], ["Bottoms", "Light denim shorts"], ["Footwear", "Cork wedge sandals with daisy details"], ["Accents", "Big gold drop earrings, curly hair"]]},
+{"id": 37, "title": "The Heather Tank & Black Denim Mini", "cat": "Casual", "c": ["#D8D2C8", "#2B2B2B", "#C9A24B", "#F4EDE3"], "tip": "Chunky gold hoops and a charm bracelet are all this simple outfit needs.", "desc": "A heather-grey square-neck tank with a black denim mini skirt, cream and black retro sneakers with gum soles, chunky gold hoops and a gold heart-charm bracelet, with a messy bun.", "layers": [["Base layer", "Heather-grey square-neck tank"], ["Top / Outerwear", "None"], ["Bottoms", "Black denim mini skirt"], ["Footwear", "Cream and black retro sneakers with gum soles"], ["Accents", "Chunky gold hoops, heart-charm bracelet, messy bun"]]},
+{"id": 38, "title": "The School-Day Babydoll Top", "cat": "Casual", "c": ["#1F1C1A", "#9DBCD8", "#F2B6CB", "#2B2B2B"], "tip": "Pink sneakers add a pop of colour to an all-neutral outfit.", "desc": "A black babydoll cami with light-wash wide-leg jeans, soft pink retro sneakers, gold hoops and a black backpack: easy for school or a day out.", "layers": [["Base layer", "Black babydoll cami"], ["Top / Outerwear", "None"], ["Bottoms", "Light-wash wide-leg jeans"], ["Footwear", "Pink suede retro sneakers"], ["Accents", "Black backpack, gold hoop earrings, loose waves"]]},
+{"id": 39, "title": "The Pink Stripe Pants Set", "cat": "Loungewear", "c": ["#F4C6D0", "#1F1C1A", "#1F2A4A", "#7A4A2E"], "tip": "A black tank and tote make pastel pants look sharp.", "desc": "Wide-leg pink striped drawstring pants with a black cami, navy and pink retro sneakers, a black nylon tote with brown handles, pink headphones and gold jewellery.", "layers": [["Base layer", "Black cami"], ["Top / Outerwear", "None"], ["Bottoms", "Pink striped drawstring wide-leg pants"], ["Footwear", "Navy and pink retro sneakers with gum soles"], ["Accents", "Black tote, pink headphones, gold hoops, bangle and charms"]]},
+{"id": 40, "title": "The Denim Puff-Sleeve Top", "cat": "Dressy", "c": ["#4B6E9A", "#FFF8EE", "#D9B58A", "#1F1C1A"], "tip": "Pair a structured denim top with a soft skirt for a sweet contrast.", "desc": "A denim puff-sleeve top with a button front and ruffle hem over a white lace-trim mini skirt, polka-dot ballet flats and a half-up braided style.", "layers": [["Base layer", "Denim puff-sleeve button-front top"], ["Top / Outerwear", "None"], ["Bottoms", "White lace-trim skirt with bow detail"], ["Footwear", "Polka-dot bow ballet flats"], ["Accents", "Braided half-up waves"]]},
+{"id": 41, "title": "The Floral Cami & Clogs", "cat": "Casual", "c": ["#F4EDE3", "#8FB1D4", "#F2B6C0", "#C9A24B"], "tip": "Frilly socks with clogs are a fun, comfy finishing touch.", "desc": "A floral lace-trim cami with light denim shorts, pink suede clogs with frilly white socks, a pink-trimmed canvas tote and gold flower jewellery.", "layers": [["Base layer", "Floral lace-trim cami"], ["Top / Outerwear", "None"], ["Bottoms", "Light-wash denim shorts"], ["Footwear", "Pink suede clogs with frilly white socks"], ["Accents", "Pink-trim canvas tote, gold flower earrings and cuff"]]},
+{"id": 42, "title": "The Cosy Brown Hoodie", "cat": "Cosy", "c": ["#4A2B22", "#F4EDE3", "#8FA8C8", "#9A7B5A"], "tip": "Layer a long scarf over a hoodie for extra warmth and style.", "desc": "A chunky brown knit zip hoodie over a white lace cami, wide-leg faded jeans, a cream fringe scarf, brown headband, brown shoulder bag and platform shearling boots.", "layers": [["Base layer", "White lace-trim cami with bow"], ["Top / Outerwear", "Chunky brown knit zip hoodie"], ["Bottoms", "Wide-leg faded blue jeans"], ["Footwear", "Platform shearling boots"], ["Accents", "Cream fringe scarf, brown headband, layered necklaces, shoulder bag"]]},
+{"id": 43, "title": "The Pink Hoodie & Sweats", "cat": "Loungewear", "c": ["#F0B8C8", "#FFFFFF", "#B8BCC8", "#F4EDE3"], "tip": "A fluffy headband adds comfort and personality to a cosy day.", "desc": "A soft pink zip hoodie over a white lace cami, light grey wide-leg sweatpants, cream platform sneakers, a fluffy headband and a cream shoulder bag.", "layers": [["Base layer", "White ribbed cami with pink bow"], ["Top / Outerwear", "Soft pink zip-up hoodie"], ["Bottoms", "Light grey wide-leg sweatpants"], ["Footwear", "Cream platform sneakers"], ["Accents", "Fluffy headband, layered necklaces, cream shoulder bag with pom charm"]]},
+{"id": 44, "title": "The Soft Girl Hoodie", "cat": "Casual", "c": ["#C5C7CC", "#F4B6CA", "#8FB1D4", "#FFFFFF"], "tip": "Keep the base grey, blue and white, then add pink bows as the finishing touch.", "desc": "A light grey bow-embroidered zip hoodie over a white cami, light-wash wide-leg jeans, pink and white sneakers, a pink shoulder bag and pink bow hair clips.", "layers": [["Base layer", "White ribbed cami with bow"], ["Top / Outerwear", "Light grey zip hoodie with bow embroidery"], ["Bottoms", "Light-wash wide-leg jeans"], ["Footwear", "Pink and white sneakers"], ["Accents", "Pink bow shoulder bag, bow hair clips and earrings, layered necklace"]]},
+{"id": 45, "title": "The Cream Knit Set", "cat": "Loungewear", "c": ["#EADBC3", "#FFFFFF", "#F2B6C0", "#D9C4A5"], "tip": "A pearl necklace and bow bag dress up a matching knit set.", "desc": "A cream ribbed knit cardigan with matching wide-leg knit trousers, a white cami, fluffy bow slippers and a pink shoulder bag with a pearl charm.", "layers": [["Base layer", "White ribbed cami"], ["Top / Outerwear", "Cream ribbed knit cardigan with pockets"], ["Bottoms", "Matching cream knit wide-leg trousers"], ["Footwear", "Fluffy cream slippers with bows"], ["Accents", "Pink shoulder bag with pearl charm, pearl and bow necklace"]]},
+{"id": 46, "title": "The Pink Scarf Puffer", "cat": "Cosy", "c": ["#F2E6D6", "#F2B6C0", "#8FB1D4", "#C9A98A"], "tip": "A pink scarf adds colour to a cream winter coat.", "desc": "A cream puffer jacket with a faux-fur hood over a ribbed turtleneck, wide-leg blue jeans, a long pink bow scarf, a cream shoulder bag and platform shearling boots.", "layers": [["Base layer", "Cream ribbed turtleneck"], ["Top / Outerwear", "Cream hooded puffer jacket with faux-fur trim"], ["Bottoms", "Wide-leg blue jeans"], ["Footwear", "Platform shearling boots"], ["Accents", "Pink bow scarf, cream shoulder bag, dainty bow jewellery, hair bow"]]},
+{"id": 47, "title": "The Bow Cardigan Set", "cat": "Cosy", "c": ["#F4EDE3", "#F2B6C0", "#E8DCC8", "#9A6B3E"], "tip": "Pink bows on a cream knit are sweet without being too much.", "desc": "A cream cardigan with pink bow details over a pink lace-trim cami, cream drawstring wide-leg pants, fluffy platform boots and a pink shoulder bag.", "layers": [["Base layer", "Pink ribbed lace-trim cami"], ["Top / Outerwear", "Cream bow-detail knit cardigan"], ["Bottoms", "Cream drawstring wide-leg pants"], ["Footwear", "Fluffy-trim platform boots with bow"], ["Accents", "Pink shoulder bag with heart charms, layered necklaces, bow hair clips"]]},
+{"id": 48, "title": "The Tie-Front Cami & Sneakers", "cat": "Casual", "c": ["#F4EDE3", "#A9C8E2", "#2F5B8A", "#C9A24B"], "tip": "A small denim bag adds detail and keeps your hands free.", "desc": "A cream tie-front cami top with light wide-leg jeans, blue suede retro sneakers, a small denim shoulder bag, tortoiseshell glasses and gold bow earrings.", "layers": [["Base layer", "Cream tie-front cami with halter tie back"], ["Top / Outerwear", "None"], ["Bottoms", "Light-wash wide-leg jeans"], ["Footwear", "Blue suede retro sneakers with gum soles"], ["Accents", "Denim shoulder bag, tortoiseshell glasses, bow earrings, clover necklace"]]},
+{"id": 49, "title": "The Lily Tube Top & Frayed Shorts", "cat": "Casual", "c": ["#FFFFFF", "#E8825A", "#9FC1DE", "#C9A24B"], "tip": "Stack gold bracelets and wear chunky hoops for an easy summer finish.", "desc": "A white tube top with a lily and butterfly print, distressed light-wash denim shorts, white retro sneakers, chunky gold hoops and stacked gold bead bracelets.", "layers": [["Base layer", "White lily-print tube top"], ["Top / Outerwear", "None"], ["Bottoms", "Distressed light-wash denim shorts"], ["Footwear", "White retro sneakers with gum soles"], ["Accents", "Chunky gold hoops, stacked gold bead bracelets, loose curls"]]},
+{"id": 50, "title": "The Emo Girl Era", "cat": "Edgy", "c": ["#1F1C1A", "#3B3B44", "#C0C0C8", "#6B6B72"], "tip": "Silver stars and layered necklaces add sparkle to an all-black outfit.", "desc": "A black lace cami with an oversized black zip hoodie worn off the shoulders, a plaid pleated mini skirt with a star-charm belt, star-detail legwarmers, chunky platform boots, headphones and a glossy black shoulder bag.", "layers": [["Base layer", "Black lace-trim bow cami"], ["Top / Outerwear", "Oversized black zip hoodie, worn off the shoulders"], ["Bottoms", "Black plaid pleated mini skirt with studded star belt"], ["Footwear", "Chunky black platform boots"], ["Accents", "Star legwarmers, headphones, star hair clips, layered cross necklaces, glossy shoulder bag"]]},
+{"id": 51, "title": "The Dark Cold-Day Fit", "cat": "Edgy", "c": ["#1A1A1D", "#4A4A50", "#8A8A92", "#E8E8EC"], "tip": "A graphic beanie and studded belt pull a dark outfit together.", "desc": "A black star-graphic top with a matching zip hoodie, baggy washed black cargo jeans with a studded belt, platform boots, a star beanie, headphones and a chain-detail shoulder bag.", "layers": [["Base layer", "Black star-graphic top"], ["Top / Outerwear", "Black star-print zip hoodie"], ["Bottoms", "Baggy washed black cargo jeans with studded belt"], ["Footwear", "Chunky black platform boots"], ["Accents", "Star beanie, headphones, layered necklaces, chain shoulder bag"]]},
+{"id": 52, "title": "The Ruffle Top & Black Jeans", "cat": "Casual", "c": ["#FFFFFF", "#2B2B2B", "#E8DCC8", "#C9A24B"], "tip": "A frilly white top softens relaxed black jeans.", "desc": "A white ruffle-strap sweetheart top with wide-leg washed black jeans, cream and black retro sneakers, a black lace-up backpack and a gold coin necklace.", "layers": [["Base layer", "White ruffle-strap sweetheart top"], ["Top / Outerwear", "None"], ["Bottoms", "Wide-leg washed black jeans"], ["Footwear", "Cream and black retro sneakers"], ["Accents", "Black backpack, gold coin necklace, gold hoops"]]}
+];
+const META={1:["autumn","t"],2:["winter","t"],3:["winter","t"],4:["autumn","t"],5:["autumn","m"],6:["autumn","t"],7:["autumn","t"],8:["autumn","t"],9:["autumn","m"],10:["autumn","m"],11:["winter","m"],12:["spring","m"],13:["autumn","m"],14:["winter","m"],15:["autumn","m"],16:["winter","t"],17:["spring","m"],18:["spring","t"],19:["spring","t"],20:["winter","m"],21:["summer","t"],22:["spring","t"],23:["summer","t"],24:["summer","t"],25:["winter","t"],26:["winter","m"],27:["summer","m"],28:["spring","m"],29:["summer","t"],30:["summer","m"],31:["summer","m"],32:["summer","m"],33:["summer","m"],34:["summer","t"],35:["summer","m"],36:["summer","t"],37:["summer","t"],38:["spring","t"],39:["spring","t"],40:["spring","t"],41:["summer","t"],42:["winter","t"],43:["winter","t"],44:["autumn","t"],45:["winter","m"],46:["winter","m"],47:["winter","t"],48:["spring","m"],49:["summer","t"],50:["autumn","t"],51:["winter","t"],52:["spring","t"]};
+const NOTES={5:"Soft leggings and a roomy pullover keep you comfy through long days at home.",
+9:"A roomy knit with relaxed jeans, and a tote that doubles as your day bag.",
+10:"Layered warmth for stroller walks, with a big bag for the essentials.",
+11:"A coat you can throw on over anything in seconds.",
+12:"A simple tee and trench is a quick, polished outfit with no fuss.",
+13:"A soft knit with wide sleeves that push up easily. Light denim is easy to wear all day.",
+14:"A long coat covers everything and goes with any outfit, ideal for rushed mornings.",
+15:"Roomy and easy to layer, with no tight sleeves to wrestle with.",
+17:"A floaty top, relaxed jeans and comfy sneakers are easy for park days, with a big tote for the essentials.",
+20:"Soft fleece, an elastic waist and slippers: ideal for cosy days at home.",
+26:"Soft, roomy and warm: wear it from the school run to a coffee date.",
+27:"One flowy dress is quick to put on, and the gathered fit is easy to move in.",
+28:"Breezy and comfortable for long walks and picnics.",
+30:"A big straw tote has room for everything, and flat sandals keep it easy.",
+31:"A long, flowy dress with a side slit is easy to walk in and feels dressed up.",
+32:"A light tiered dress that is cool and comfortable on hot days.",
+33:"A wrap skirt and flat sandals make a simple, easy-to-wear outfit for warm days out.",
+35:"A flowing dress with a small clutch: lovely for a date night or family celebration.",
+45:"A matching soft knit set is comfy and takes seconds to put on, and slippers make it perfect for home.",
+46:"A warm hooded puffer is quick to throw on for cold school runs and park walks.",
+48:"A light top, relaxed jeans and sneakers are easy to move in, and a small cross-body style bag keeps your hands free."};
+const SEASONS=[
+{id:"spring",cls:"s-spring",fx:["🌸","🌷","🌱"],emoji:"🌸",kick:"Spring",head:"Fresh, light & floral",
+ intro:"Warmer weather means lighter layers, softer colours and plenty of denim. Think pastel knits, flared jeans, floaty tops and sneakers you can wear all day.",
+ ess:["Light-wash jeans","Pastel top or cami","Easy sneakers","Light cardigan","Small shoulder bag"],
+ tips:[["Layer light","A cami or tee under a cardigan helps you adapt when spring weather changes."],["Go pastel","Mint, pink and cream look fresh together and sit nicely with denim."],["Denim is your friend","Light-wash or flared jeans suit almost every spring outfit."]]},
+{id:"summer",cls:"s-summer",fx:["☀️","🌼","🍋"],emoji:"☀️",kick:"Summer",head:"Bright, breezy & easy",
+ intro:"Hot days call for flowy dresses, shorts and sandals. Choose light, breathable fabrics in colours you love, and keep accessories simple.",
+ ess:["A flowy dress","Denim shorts","Comfy sandals","Straw or small bag","Gold jewellery"],
+ tips:[["Breathable fabrics","Cotton and linen-style fabrics feel cooler on hot days."],["Add a colour pop","Lemon, pink or sky blue instantly says summer."],["Keep accessories simple","Gold hoops and a small bag finish most summer outfits."]]},
+{id:"autumn",cls:"s-red",fx:["🍂","🍁","🍂"],emoji:"🍂",kick:"Autumn",head:"Cosy knits & warm tones",
+ intro:"Chunky knits, plaid and boots in rust, chestnut and cream. Layer your pieces so you can adjust as the temperature drops.",
+ ess:["Cosy sweater or cardigan","Plaid or wide-leg bottoms","Boots or retro sneakers","Light jacket or trench","A roomy tote"],
+ tips:[["Go chunky","Thick knits look cosy and make even simple outfits feel styled."],["Warm up your neutrals","Swap black for espresso and cream and everything feels more autumn."],["Finish at the ankle","Legwarmers, boots and sneakers add warmth and personality."]]},
+{id:"winter",cls:"s-winter",fx:["❄️","✨","❄️"],emoji:"❄️",kick:"Winter",head:"Warm, soft & layered",
+ intro:"Cold days mean warm coats, soft knits and cosy loungewear. Stick to calm colours so you can mix and match every piece.",
+ ess:["A warm coat","Soft knits","Dark or wide-leg jeans","Fleece loungewear","Warm boots or slippers"],
+ tips:[["Start with a good coat","One warm coat goes over everything and does most of the work."],["Layer thin to thick","A tee, then a knit, then a coat keeps you warm and lets you remove layers indoors."],["Cosy at home too","Soft fleece and slippers count as an outfit."]]}
+];
+const AUDT={t:"teens",m:"new mums"},LINE={t:"Picked for school days, hang-outs and weekends.",m:"Picked for easy mornings, comfort and quick getting ready."};
+let aud="t",favs=new Set(),checks={},open=null;
+try{favs=new Set(JSON.parse(localStorage.getItem("sf_favs")||"[]"));aud=localStorage.getItem("sf_aud")||"t"}catch(e){}
+const save=()=>{try{localStorage.setItem("sf_favs",JSON.stringify([...favs]));localStorage.setItem("sf_aud",aud)}catch(e){}};
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),L=id=>LOOKS.find(l=>l.id===id);
+const heart=`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 6.2 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>`;
+const heartBtn=(l,cls)=>`<button class="heart ${favs.has(l.id)?"on":""} ${cls} w-10 h-10 rounded-full grid place-items-center shadow" data-heart="${l.id}" aria-pressed="${favs.has(l.id)}" aria-label="Save ${l.title}">${heart}</button>`;
+const img=l=>`<img src="${IMGS[l.id-1]}" alt="${l.title}" class="block w-full" style="aspect-ratio:${R[l.id]||"822/1456"};object-fit:contain" loading="lazy">`;
+const dots=l=>l.c.map(c=>`<span class="w-6 h-6 rounded-full border border-black/10" style="background:${c}"></span>`).join("");
+const rnd=(n,e,f)=>Array.from({length:n},(_,i)=>f(e[i%e.length],i)).join("");
+
+$("#leaves").innerHTML=rnd(18,["🌸","☀️","🍂","❄️"],(e,i)=>`<span class="leaf" style="left:${(i*5.6+Math.random()*3)%100}%;font-size:${18+Math.random()*24}px;animation-duration:${9+Math.random()*10}s;animation-delay:-${Math.random()*14}s">${e}</span>`);
+const words=["Spring florals","Summer dresses","Autumn knits","Winter coats","Easy layers","Teen picks","New mum picks"];
+$("#mq").innerHTML=[...words,...words].map(w=>`<span class="px-6">${w} <span class="text-[#FFC93C]">✦</span></span>`).join("");
+$$("[data-img]").forEach(e=>e.src=IMGS[e.dataset.img-1]);
+const navHtml=SEASONS.map(s=>`<a href="#${s.id}" data-n="${s.id}">${s.emoji} ${s.kick}</a>`).join("");
+$("#nav").innerHTML=navHtml;$("#nav2").innerHTML=navHtml;
+let bi=0;const be=["🌸","☀️","🍂","❄️"];setInterval(()=>{bi=(bi+1)%4;$("#be").textContent=be[bi]},2500);
+
+const cards=a=>a.map((p,i)=>`<div class="reveal glass rounded-2xl p-6"><p class="serif text-3xl font-black opacity-60">0${i+1}</p><h3 class="serif font-bold text-xl mt-2">${p[0]}</h3><p class="mt-2 leading-relaxed text-[15px] opacity-90">${p[1]}</p></div>`).join("");
+const tile=l=>`<article class="lcard reveal flex flex-col overflow-hidden">
+ <div class="relative bg-[#5f5f5f]">${img(l)}${heartBtn(l,"absolute top-3 right-3")}</div>
+ <div class="p-5 flex flex-col gap-2 flex-1">
+  <span class="self-start text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full" style="background:#FBE0CC;color:#9C2A1F">${l.cat}</span>
+  <h3 class="serif font-black text-xl leading-tight">${l.title}</h3>
+  ${NOTES[l.id]?`<p class="text-sm leading-relaxed text-[#5A3A30]"><b style="color:#B8301F">Why it works:</b> ${NOTES[l.id]}</p>`:""}
+  <p class="text-sm leading-relaxed text-[#5A3A30]"><b style="color:#B8301F">Styling tip:</b> ${l.tip}</p>
+  <div class="flex gap-2" aria-label="Colour story">${dots(l)}</div>
+  <button data-open="${l.id}" class="btn mt-auto self-start text-white text-sm" style="background:linear-gradient(90deg,#B8301F,#E0651F)">See every layer →</button>
+ </div></article>`;
+$("#seasons").innerHTML=SEASONS.map(s=>`<section id="${s.id}" class="${s.cls} relative overflow-hidden py-24">
+ <div class="decor" aria-hidden="true">${rnd(12,s.fx,(e,i)=>`<span class="p" style="left:${i*8.3+Math.random()*4}%;font-size:${16+Math.random()*20}px;animation-duration:${7+Math.random()*7}s;animation-delay:-${Math.random()*10}s">${e}</span>`)}</div>
+ <div class="relative z-10 max-w-6xl mx-auto px-5">
+  <p class="reveal font-semibold tracking-widest text-sm uppercase opacity-80">${s.emoji} ${s.kick}</p>
+  <h2 class="reveal serif font-black text-5xl md:text-7xl mt-2 leading-none">${s.head}</h2>
+  <p class="reveal mt-6 max-w-2xl text-lg leading-relaxed">${s.intro}</p>
+  <div class="reveal mt-8"><p class="font-semibold mb-3">${s.kick} essentials</p><div class="flex flex-wrap gap-2">${s.ess.map((e,i)=>`<span class="glass rounded-full px-4 py-2 text-sm"><b>${i+1}</b>&nbsp; ${e}</span>`).join("")}</div></div>
+  <div class="grid md:grid-cols-3 gap-5 mt-10">${cards(s.tips)}</div>
+  <h3 data-count="${s.id}" class="reveal serif font-black text-3xl mt-16"></h3>
+  <p data-line="${s.id}" class="reveal mb-6 opacity-85"></p>
+  <div data-grid="${s.id}" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+ </div></section>`).join("");
+
+function fill(){
+  SEASONS.forEach(s=>{
+    const ids=Object.keys(META).map(Number).filter(i=>META[i][0]===s.id&&META[i][1]===aud);
+    $(`[data-grid="${s.id}"]`).innerHTML=ids.map(i=>tile(L(i))).join("");
+    $(`[data-count="${s.id}"]`).textContent=`${ids.length} ${s.kick.toLowerCase()} looks for ${AUDT[aud]}`;
+    $(`[data-line="${s.id}"]`).textContent=LINE[aud];
+  });
+  $$(".reveal:not(.in)").forEach(e=>io.observe(e));
+}
+function setAud(a){
+  aud=a;save();
+  $$("[data-aud]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.aud===a));
+  fill();
+}
+function renderSaved(){
+  const list=[...favs].map(L).filter(Boolean);
+  $("#savedList").innerHTML=list.length?list.map(l=>`<div class="lcard flex items-center gap-4 p-3 w-full sm:w-80"><div class="w-20 shrink-0 rounded-xl overflow-hidden bg-[#5f5f5f]">${img(l)}</div><div class="min-w-0"><button data-open="${l.id}" class="serif font-bold text-left leading-snug">${l.title}</button><p class="text-xs text-[#6B4A3E] mb-2">${l.cat}</p>${heartBtn(l,"")}</div></div>`).join(""):`<p class="text-lg max-w-md text-[#E8D3BC]">Nothing here yet. Tap the heart on any look and it will appear here.</p>`;
+}
+function sync(){
+  $$("[data-heart]").forEach(b=>{const on=favs.has(+b.dataset.heart);b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});
+  $$(".favCount").forEach(e=>e.textContent=favs.size);
+}
+function renderDrawer(){
+  const l=L(open);
+  $("#dCat").textContent=l.cat;$("#dTitle").textContent=l.title;$("#dDesc").textContent=l.desc;
+  $("#dFrame").innerHTML=`<div style="background:#5f5f5f"><img src="${IMGS[l.id-1]}" alt="${l.title}" class="block mx-auto max-h-[75vh] w-auto"></div>`;
+  $("#dLayers").innerHTML=l.layers.map((x,i)=>{const k=l.id+"-"+i;return `<li style="border-bottom:1px solid var(--line)"><label class="flex gap-3 items-start py-3 cursor-pointer"><input type="checkbox" class="chk mt-1 w-4 h-4" data-k="${k}" ${checks[k]?"checked":""}><span><span class="block font-semibold">${x[0]}</span><span class="block text-sm" style="color:var(--muted)">${x[1]}</span></span></label></li>`}).join("");
+  $("#dHeart").textContent=favs.has(l.id)?"Saved to favorites ♥":"Save this look";
+}
+function openDrawer(id){open=id;renderDrawer();$("#drawer").classList.add("open");$("#scrim").classList.add("open");$("#drawer").setAttribute("aria-hidden","false");document.body.style.overflow="hidden";$("#dClose").focus()}
+function closeDrawer(){const p=open;open=null;$("#drawer").classList.remove("open");$("#scrim").classList.remove("open");$("#drawer").setAttribute("aria-hidden","true");document.body.style.overflow="";const b=document.querySelector(`[data-open="${p}"]`);if(b)b.focus()}
+function toggle(id){favs.has(id)?favs.delete(id):favs.add(id);save();renderSaved();sync();if(open===id)renderDrawer()}
+document.addEventListener("click",e=>{
+  const g=e.target.closest("[data-go]");if(g){setAud(g.dataset.go);document.getElementById("spring").scrollIntoView({behavior:"smooth"});return}
+  const a=e.target.closest("[data-aud]");if(a){setAud(a.dataset.aud);sync();return}
+  const h=e.target.closest("[data-heart]");if(h){toggle(+h.dataset.heart);return}
+  const o=e.target.closest("[data-open]");if(o){openDrawer(+o.dataset.open);return}
+  if(e.target.closest("#dClose")||e.target.id==="scrim"){closeDrawer();return}
+  if(e.target.closest("#dHeart")&&open)toggle(open);
+});
+document.addEventListener("change",e=>{if(e.target.dataset.k)checks[e.target.dataset.k]=e.target.checked});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&open)closeDrawer()});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+setAud(aud);renderSaved();sync();
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("[data-n]").forEach(a=>a.classList.toggle("act",a.dataset.n===e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+SEASONS.forEach(s=>so.observe(document.getElementById(s.id)));
+</script>
+</body>
+</html>
